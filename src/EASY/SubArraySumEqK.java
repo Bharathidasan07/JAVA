@@ -4,6 +4,7 @@ import java.util.*;
 
 public class SubArraySumEqK {
 			// Here the question is, we need find all the subArrays which has a sum of k 
+			// new comment added
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,-3,1,1,1,4,2,-3};
 		int k=3,count=0,preSum=0;
