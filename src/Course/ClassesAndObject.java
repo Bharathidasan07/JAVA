@@ -12,7 +12,7 @@ class book{
 	int id;
 }
 
-class 
+
 
 public class ClassesAndObject {
 
