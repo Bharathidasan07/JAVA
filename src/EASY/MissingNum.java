@@ -6,6 +6,7 @@ public class MissingNum {
 
 	public static void main(String[] args) {
 		int[] nums = {9,6,4,2,3,5,7,0,1};
+		List<Integer> AL = new ArrayList<>();
 		Set<Integer> HS = new HashSet<>();
 		int n = nums.length,mn,Asum=0,Nsum;
 		
