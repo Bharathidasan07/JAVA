@@ -1,8 +1,9 @@
-package EASY;
+package medium;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
-public class LongestUniqueSubstring {
+public class LongestSubstringWithoutRepeatingCharacters {
 
 	public static void main(String[] args) {
 		// Brute force
@@ -62,6 +63,7 @@ public class LongestUniqueSubstring {
 				r++;
 			}
 		 */
+
 
 	}
 
