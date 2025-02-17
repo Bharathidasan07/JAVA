@@ -28,16 +28,31 @@ public class LongestUniqueSubstring {
 //		}
 //		System.out.println(s.substring(start, end));
 		//Sliding window method
-		String s = "abcbdaac";
+		String s = "abcabcbb";
 		int l=0,r=0,count=0;
 		Map<Character,Integer> HM = new HashMap<>();
-		while(r>s.length()) {
-			if(HM.containsKey(s.charAt(r))) {
+		while(r<s.length()) {
+			char cCh = s.charAt(r);
+			int preSeenIdx = HM.getOrDefault(cCh, -1);
+			if(preSeenIdx >= l) {
+				l = preSeenIdx + 1;
+			}
+			HM.put(cCh, r);
+			System.out.println("Each iteration count "+(r-l+1));
+			count = Math.max(count, r-l+1);
+			System.out.println("count "+count);
+			r++;
+		}
+		System.out.println(count);
+		
+		/*
+		 * if(HM.containsKey(s.charAt(r))) {
 				int cc = r-l;
 				if(cc > count) {
 					count = cc;
 				}
-				if(HM.get(s.charAt(r))<r) {
+				if(HM.get(s.charAt(r))>l) {
+					 
 					HM.put(s.charAt(r), r);
 				}else {
 					r = HM.get(s.charAt(r))+1;
@@ -46,7 +61,7 @@ public class LongestUniqueSubstring {
 				HM.put(s.charAt(r), r);
 				r++;
 			}
-		}
+		 */
 
 	}
 
