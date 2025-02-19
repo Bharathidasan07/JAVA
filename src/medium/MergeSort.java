@@ -61,7 +61,6 @@ public class MergeSort {
 	public static void mergeInPlace(int[] nums, int s,int m, int e) {
 		int[] joined = new int[e-s];
 		int i=s,j=m,k=0;
-		
 		while(i<m && j<e) {
 			if(nums[i]<nums[j]) {
 				joined[k++] = nums[i++];
