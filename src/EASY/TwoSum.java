@@ -10,13 +10,9 @@ public class TwoSum {
 		List<List<Integer>> AL = new ArrayList<>();
 		Map<Integer,Integer> HM = new HashMap<>();
 		for(int i=0;i<nums.length;i++) {
-			List<Integer> List = new ArrayList<>();
 			int compliment = target - nums[i];
 			if(HM.containsKey(compliment)) {
-				List.add(i);
-				List.add(HM.get(compliment));
-				AL.add(List);
-				
+				AL.add(Arrays.asList(i,HM.get(compliment)));
 			}
 			HM.put(nums[i], i);
 		}
