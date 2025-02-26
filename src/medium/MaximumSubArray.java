@@ -3,12 +3,25 @@ package medium;
 import java.util.*;
 
 public class MaximumSubArray {
+	public static int maxSubArraySum(int[] nums) {
+		int sum = 0, max=Integer.MIN_VALUE;
+		for(int i=0;i<nums.length;i++) {
+			sum+=nums[i];
+			if(sum>max) {
+				max = sum;
+			}
+		}
+		return sum;
+	}
 
 	public static void main(String[] args) {
-		int[] nums = {1,2,-1,-2,2,1,-2,1,4,-5,4};
+		int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+				   //{-2,-1,-4,0,-1,1,2,-3,1}
 		int n = nums.length;
 		int p1=0,p2=n-1,max=Integer.MIN_VALUE;
-		
+		// This is not the correct approach to the solution
+		// The Medium Question will not be that easy to solve
+		System.out.println(maxSubArraySum(nums));
 		// This approach misses some potential subArrays 
 		/*
 		 * Wrong Answer
