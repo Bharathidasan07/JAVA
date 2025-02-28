@@ -17,7 +17,7 @@ public class MainClass {
 			switch(n) {
 			
 			case 1:{
-				System.out.print("Enter your name : ");
+				System.out.print("\nEnter your name : ");
 				String name = s.next();
 				System.out.print("\nEnter your age : ");
 				int age = s.nextInt();
@@ -33,7 +33,8 @@ public class MainClass {
 			}
 			
 			case 2:{
-				System.out.println("Enter your T");
+				System.out.print("\nEnter your Ticket Id : ");
+				int id = s.nextInt();
 				break;
 			}
 			
